@@ -1,0 +1,7 @@
+{
+    "requests": [
+        { "location": "Bhubaneswar" },
+        { "location": "IGIT" },
+        { "location": "Puri" }
+    ]
+}

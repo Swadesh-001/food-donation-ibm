@@ -1,0 +1,146 @@
+/* Dashboard Styles */
+body{
+    background-color: #ebd7d7;
+}
+.dashboard {
+    /* display: flex; */
+    height: 100vh;
+}
+
+.dashboard-header {
+    background-color: #8471c9bb;
+    color: white;
+    padding: 10px 20px;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+}
+.dashboard-header #user-name{
+    color: orange;
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.dashboard-header button{
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .3s;
+}
+.dashboard-header button:hover{
+    color: white;
+    background-color: black;
+    transition: .3s;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-sidebar {
+    /* display: none; */
+    width: 300px;
+    height: 100vh;
+    background-color: #d3cdcd;
+    flex: 0 0 200px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    /* position: fixed; */
+    border-radius: 0px 20px 20px 0px;
+    position: sticky;
+    top: 0;
+
+}
+
+.dashboard-sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-sidebar ul li {
+    border-radius: 5px;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.dashboard-sidebar ul li:hover {
+    background-color: #ffffff;
+}
+
+.dashboard-main {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard-section {
+    width: 100%;
+    display: none;
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+/* #dashboard-home{
+    display:contents;
+} */
+
+.dashboard-section.active {
+    display: block;
+}
+
+#donations-list, #pending-requests {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#donations-list div, #pending-requests div {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+#create-donation {
+    width: 100%;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#create-donation form{
+    width: 100%;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+}
+#create-donation form input,textarea{
+    padding: 3px;
+    outline: none;
+    border: 1px solid #cc5200;
+    border-radius: 5px;
+}
+#create-donation form button{
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #41cc00;
+    border-radius: 5px;
+    background-color: rgb(119, 209, 101);
+    color: black;
+    cursor: pointer;
+}
+#create-donation form .submit{
+    background-color: greenyellow;
+}
+#create-donation form .cancel{
+    background-color: red;
+    color: white;
+}

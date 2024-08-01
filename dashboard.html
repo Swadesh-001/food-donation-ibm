@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="dashboard" class="dashboard">
+        <header class="dashboard-header">
+            <h2>Welcome, <span id="user-name">User</span></h2>
+            <button onclick="logout()">Logout</button>
+        </header>
+        <div class="container">
+            <nav class="dashboard-sidebar">
+                <ul>
+                    <li onclick="showSection('dashboard-home')">Dashboard</li>
+                    <li onclick="showSection('create-donation')">Create Donation</li>
+                    <li onclick="showSection('view-donations')">View Donations</li>
+                    <li onclick="showSection('profile')">Profile</li>
+                    <li onclick="showSection('settings')">Settings</li>
+                </ul>
+            </nav>
+            <main class="dashboard-main">
+                <section id="dashboard-home" class="dashboard-section">
+                    <h3>Dashboard Home</h3>
+                    <p>Welcome to your dashboard.</p>
+                    <h4>Pending Requests</h4>
+                    <div id="pending-requests">
+                        <!-- List of requests will appear here -->
+                    </div>
+                </section>
+                <section id="create-donation" class="dashboard-section">
+                    <h3>Create Donation</h3>
+                    <form id="donation-form">
+                        <label for="food-type">Food Type:</label>
+                        <input type="text" id="food-type" name="foodType" required>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required>
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="date" id="expiry-date" name="expiryDate" required>
+                        <label for="pickup-location">Pickup Location:</label>
+                        <input type="text" id="pickup-location" name="pickupLocation" required>
+                        <label for="notes">Additional Notes:</label>
+                        <textarea id="notes" name="notes"></textarea>
+                        <button type="submit" class="submit">Submit</button>
+                        <button type="button" class="cancel" onclick="cancelForm()">Cancel</button>
+                    </form>
+                </section>
+                <section id="view-donations" class="dashboard-section">
+                    <h3>View Donations</h3>
+                    <input type="text" id="search" placeholder="Search donations...">
+                    <div id="donations-list">
+                        <!-- List of donations will appear here -->
+                    </div>
+                </section>
+                <section id="profile" class="dashboard-section">
+                    <h3>Profile</h3>
+                    <p>User information and settings.</p>
+                </section>
+                <section id="settings" class="dashboard-section">
+                    <h3>Settings</h3>
+                    <p>Account settings and preferences.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>
